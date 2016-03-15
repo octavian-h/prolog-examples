@@ -25,6 +25,9 @@
 % ?- add_list([1,2], [3], R).
 % R=[1,5].
 %
+% ?- add_list([1,2], [0], R).
+% R=[1,2].
+%
 add_list(A,B,Sum):-
 	reverse(A,RA),
 	reverse(B,RB),
@@ -85,6 +88,9 @@ substract_rev([X|A],[Y|B],Acc,[D|R]):-D is X+10-Y-Acc, substract_rev(A,B,1,R).
 % Examples of use:
 % ?- multiply_list([1,2], [3], R).
 % R=[3,6].
+%
+% ?- multiply_list([1,2], [0], R).
+% R=[0].
 %
 multiply_list(A,B,Product):-
 	reverse(A,RA),
